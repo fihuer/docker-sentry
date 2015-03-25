@@ -1,0 +1,14 @@
+sentry:
+  build: ./sentry/
+  command: sentry cratesuperuser
+  ports:
+   - "8080:9000"
+  links:
+   - postgresarmv7
+   - redisarmv7
+postgresarmv7:
+  image: onlinelabs/armhf-orchadup-postgresql
+  volumes:
+   - /opt/sentry/postgres:/var/lib/postgresql/data
+redisarmv7:
+  build: ./redis/

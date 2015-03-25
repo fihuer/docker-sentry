@@ -1,0 +1,9 @@
+[submodule "sentry"]
+	path = sentry
+	url = https://github.com/docker-library/sentry.git
+[submodule "redis"]
+	path = redis
+	url = https://github.com/docker-library/redis.git
+[submodule "postgres"]
+	path = postgres
+	url = https://github.com/docker-library/postgres.git
